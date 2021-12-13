@@ -11,15 +11,16 @@
 body {
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 4fr 4fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(4, auto);
     row-gap: 10px;
     column-gap: 3px;
-    grid-template-areas: 'header header  header'
-                         '...  section image'
-                         'services services services '
-                         'projects projects projects'
-                         'footer footer  footer';
+    grid-template-areas: 'header  header'
+                         'section image'
+                         'services services '
+                         'projects projects'
+                         'footer  footer';
+    font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 } 
 
 header {
@@ -30,6 +31,7 @@ header {
 
 .content {
     grid-area: section;
+    padding-left: 15%
 }
 
 .card {
@@ -46,15 +48,19 @@ header {
 }
 
 #cards {
-    width: 360px;
+    max-width: 98vw;
+    width: 47%;
     height: auto;
     box-shadow: 7px 7px 8px 1px rgba(0, 0, 0, 0.555); 
     margin: 20px 0;
+    padding-left: 10px;
 }
 
 #cards .images {
     width: 100%;
-    height: 200px;
+    height: 250px;
+    max-width: inherit;
+    object-fit: fill;
 }
 
 .services {
@@ -118,12 +124,12 @@ nav li {
 
 .name-title p:hover {
     background-color: cornflowerblue;
-    transform: translateX(7%);
-    transition: all 0.5s ease-in-out;
-    text-align: center;
-    padding: 3px;
+    transition: all 0.3s ease-in-out;
+    padding: 5px;
+    padding-left: 15px;
     border-radius: 20px;
-    width: 60%;
+    width: 80%;
+    background-position: initial;
 }
 
 .name-title p:active {
@@ -210,6 +216,16 @@ nav li {
     margin-top: 5px;
 }
 
+.formstyle textarea {
+    display: block; 
+    height: 200px; 
+    width: 100%; 
+    resize: none; 
+    font-size: 17px; 
+    margin-top: 5px;
+    word-wrap: break-word;
+}
+
 #sendmsg {
     margin-top: 10px;
     padding: 10px;
@@ -259,16 +275,6 @@ ul.sidenav li {
 
 
 @media (max-width: 800px) {
-    body {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: 'header header'
-                             'section  image'
-                             'services services'
-                             'projects projects'
-                             'footer  footer';
-    }
-
     nav li {
         padding-left: 15px;    
         font-size: 15px;
@@ -277,9 +283,13 @@ ul.sidenav li {
     .content {
         padding: 0px 20px 0px 20px;
     }
+
+    #cards {
+        width: 600px;
+    }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 605px) {
     body {
         grid-template-columns: 1fr ;
         grid-template-rows: repeat(4, auto);
@@ -295,16 +305,8 @@ ul.sidenav li {
         padding: 0px 30px 0px 20px;
     }
 
-    #cards {
-        width: 90%;
-    }
-
     nav li {
         display: none;
-    }
-
-    nav a {
-        color: rgb(255, 255, 255);
     }
 
     #bars {
@@ -322,5 +324,9 @@ ul.sidenav li {
         transform: translateX(120%);
         transition: transform 0.5s ease-in; 
         z-index: 2;
+    }
+
+    ul a {
+        text-decoration: none;
     }
 }
