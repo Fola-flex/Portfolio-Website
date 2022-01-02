@@ -32,7 +32,6 @@ header {
     position: sticky;
     top: 0;
     z-index: 2;
-    font-family: 'Nunito' sans-serif;
 }
 
 .content {
@@ -40,7 +39,6 @@ header {
     padding-left: 15%;
     line-height: 25px;
     z-index: 1;
-    font-family: 'Nunito', sans-serif;
    }
 
 .card {
@@ -114,6 +112,7 @@ header {
     padding-right: 10%;
     padding-top: 20px;
     z-index: 1;
+    text-align: justify;
 }
 
 .services h1 {
@@ -184,6 +183,7 @@ nav li:hover {
     font-size:  50px;
     text-align: center;
     line-height: normal;
+    font-weight: bolder;
 }
 
 .name-title div {
