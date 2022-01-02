@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;500;800;900&family=Source+Sans+Pro:wght@300&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +23,8 @@ body {
                          'services services '
                          'projects projects'
                          'footer  footer';
-    font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
 } 
 
 header {
@@ -28,6 +32,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 2;
+    font-family: 'Nunito' sans-serif;
 }
 
 .content {
@@ -35,7 +40,8 @@ header {
     padding-left: 15%;
     line-height: 25px;
     z-index: 1;
-}
+    font-family: 'Nunito', sans-serif;
+   }
 
 .card {
     grid-area: image;
@@ -76,6 +82,7 @@ header {
 
 #card-text {
     padding: 20px;
+    font-weight: 200;
 }
 
 #card-text h1 {
@@ -188,7 +195,7 @@ nav li:hover {
     width: 110px;
     background: black;
     color: white;
-    border-radius: 20px;
+    border-radius: 100px;
     outline: none;
     border: none;
     text-align: center;
@@ -295,6 +302,7 @@ nav li:hover {
     display: block;
     margin-top: 20px;
     margin-bottom: 25px;
+    padding: 5px;
 }
 
 .contact-form legend {
@@ -324,8 +332,8 @@ nav li:hover {
     height: 30px;
     width: 100%;
     font-size: 17px;
-    padding: 15px;
-    margin-top: 5px;
+    padding: 20px;
+    margin-top: 10px;
 }
 
 .formstyle textarea {
