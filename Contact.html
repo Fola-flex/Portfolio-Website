@@ -6,6 +6,49 @@
     <link rel="stylesheet" href="css\all.css">
     <link rel="stylesheet" href="Portfolio.css">
     <title>FOLAFLEX</title>
+    <style>
+        body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: repeat(4, auto);
+    row-gap: 30px;
+    column-gap: 3px;
+    grid-template-areas: 'header   header'
+                         'section  image'
+                         'services services'
+                         'projects projects'
+                         'footer   footer';
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+} 
+
+@media (max-width: 801px) {
+    body {
+        grid-template-columns: 1fr ;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 'header '
+                             'section'
+                             'image  '
+                             'services'
+                             'projects'
+                             'footer ';
+    }
+}
+
+@media (max-width: 690px) {
+    body {
+        grid-template-columns: 1fr ;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 'header '
+                             'section'
+                             'image  '
+                             'services'
+                             'projects'
+                             'footer ';
+    }
+}
+    </style>
 </head>
 <body>
     <header>
@@ -34,9 +77,9 @@
             <p><a href="mailto:folarinolaore93@gmail.com">folarinolaore93@gmail.com</a></p>
             <br>
             <h3 style="border-bottom: 1px solid black;">SOCIAL MEDIA</h3>
-            <p><a href="" target="_blank">Whatsapp<i class="fab fa-whatsapp" style="color: rgb(18, 241, 18);"></i></a></p>
+            <p><a href="" target="_blank">LinkedIn<i class="fab fa-linkedin" style="color: rgb(0, 47, 255)"></i></a></p>
             <p><a href="https://mobile.twitter.com/Man_like_Fola">Twitter<i class="fab fa-twitter" style="color: rgb(0, 153, 255);"></i></a></p>
-            <a href=""><p>Facebook<i class="fab fa-facebook" style="color: blue;"></i></p></a> 
+            <a href=""><p>Github<i class="fab fa-github" ></i></p></a> 
         </div>
     </section>
 
@@ -61,23 +104,29 @@
 
     
     <footer class="footer-content">
-        <div id="mail">
-            <h2>Contact Me</h2>
-            <br>
-            <h3>Email: <span style="font-size: 16px;"><a href="mailto:folarinolaore@gmail.com">
-                folarinolaore93@gmail.com</a></span>
-            </h3>
-        </div>
-        
-        <div class="social-media">
-            <p>You can also reach out on the following platforms</p>
-            <div>
-                <a href="https://mobile.twitter.com/Man_like_Fola" target="_blank"><i class="fab fa-twitter"></i></a>
-                <i class="fab fa-whatsapp"></i>
-                <i class="fab fa-facebook"></i>
+        <div>
+            <div id="mail">
+                <h2>Contact Me</h2>
+                <br>
+                <h3>Email: <span style="font-size: 16px;"><a href="mailto:folarinolaore93@gmail.com">folarinolaore93@gmail.com</a></span></h3>
+                <h3>Phone Number: <span style="font-size: 16px;">+234 905 9139 820</span></h3>
+            </div>
+            
+            <div class="social-media">
+                <p>You can also reach out on the following platforms</p>
+                <div>
+                    <a href="https://mobile.twitter.com/Man_like_Fola" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <i class="fab fa-linkedin"></i>
+                    <a href="" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
             </div>
         </div>
+        <div style="display: block; text-align: center;">
+            <p><i class="fa fa-copyright" style="font-size: 15px;"></i> Copyright 2022</p>
+        </div>
+        <br>
     </footer> 
+    
 <script src="Portfolio.js"></script>   
 </body>
 </html>
