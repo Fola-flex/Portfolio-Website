@@ -45,6 +45,13 @@ nav {
     z-index: 10;
 }
 
+#moon-icon {
+    position: relative;
+    right: 70%;
+    font-size: 25px;
+    z-index: 10;
+}
+
 #bars {
     display: none;
     font-size: 25px;
@@ -85,13 +92,15 @@ nav li:hover {
     grid-area: section;
     padding-left: 18%;
     z-index: 1;
+    line-height: 20px;
 }
 
 .name-title {
     width: 100%;
-    padding: 60px 0px 40px 0px;
+    padding: 13% 0px 40px 0px;
     font-size:  65px;
     text-align: center;
+    font-weight: 600;
 }
 
 .name-title button {  
@@ -125,11 +134,12 @@ nav li:hover {
 }
 
 .face-card { 
-    height: 400px; 
+    height: 100%; 
     width: 300px;
-    border-radius: 5px;
+    border-radius: 50%;
     padding-top: 20%;
     max-width: 100vw;
+    object-fit: fill;
 }
 
 .contact-title {
@@ -168,15 +178,16 @@ nav li:hover {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-items: center;
     align-items: center;
-    width: 90%;
+    width: 95%;
     max-width: 98vw;
     flex-wrap: wrap;
     margin: auto;
     row-gap: 30px;
+    padding-bottom: 100px;
 }
 
 .skills img {
-    height: 45px;
+    height: 60px;
 }
 
 .services {
@@ -314,7 +325,7 @@ nav li:hover {
 }
 
 .footer-content .social-media i {
-    font-size: 40px;
+    font-size: 30px;
     padding: 30px 40px 0px 0px;
 }
 
@@ -456,6 +467,7 @@ ul.sidenav li {
 
     .name-title {
         font-size: 50px;
+        padding-top: 15%;
     }
 }
 
@@ -516,10 +528,18 @@ ul.sidenav li {
     .name-title {
         font-size: 50px;
     }
+
+    #moon-icon {
+        position: relative;
+        right: 25%;
+    }
 }
 
 @media (min-width: 1050px) {
-.name-title {
-    margin-top: 10%;
-}
+    .name-title {
+        width: 100%;
+        padding: 10% 0px 40px 0px;
+        font-size: 70px;
+        text-align: center;
+    }
 }

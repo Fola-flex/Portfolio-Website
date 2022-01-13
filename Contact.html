@@ -55,6 +55,7 @@
         <nav>
             <h1 style="z-index: 3;">FOLA<span style="color: rgb(0, 255, 221);">FL</span><span 
                 style="color: rgb(0, 255, 179);">EX</span></h1>
+                <i class="fa fa-moon" onclick="darkMode();" id="moon-icon"></i>
             <div>
                 <span id="bars">&#9776;</span>
                 <ul id="list">
@@ -77,15 +78,18 @@
             <p><a href="mailto:folarinolaore93@gmail.com">folarinolaore93@gmail.com</a></p>
             <br>
             <h3 style="border-bottom: 1px solid black;">SOCIAL MEDIA</h3>
-            <p><a href="" target="_blank">LinkedIn<i class="fab fa-linkedin" style="color: rgb(0, 47, 255)"></i></a></p>
+            <p><a href="" target="_blank">LinkedIn<i class="fab fa-linkedin" style="color: rgb(0, 47, 255);" id="linkedin"></i></a></p>
+            <p><a href="" target="_blank">Instagram<i class="fab fa-instagram"></i></a></p>
             <p><a href="https://mobile.twitter.com/Man_like_Fola">Twitter<i class="fab fa-twitter" style="color: rgb(0, 153, 255);"></i></a></p>
-            <a href=""><p>Github<i class="fab fa-github" ></i></p></a> 
+            <a href=""><p>Github<i class="fab fa-github"></i></p></a> 
         </div>
     </section>
 
     <form class="contact-form" action="contact-form.php" method="post">
         <fieldset>
-            <legend><h3 style="border-bottom: 1px solid black;"><b>CONTACT ME</b></h3></legend>
+            <legend>
+                <h3 id="contact-header" style="border-bottom: 1px solid black;" >CONTACT ME</h3>
+            </legend>
             <div class="formstyle">
                 <label for="fullname"> Name:</label>
                 <input type="text" name="fullname" placeholder="Full name" required>
@@ -117,6 +121,7 @@
                 <div>
                     <a href="https://mobile.twitter.com/Man_like_Fola" target="_blank"><i class="fab fa-twitter"></i></a>
                     <i class="fab fa-linkedin"></i>
+                    <i class="fab fa-instagram"></i>
                     <a href="" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
             </div>
@@ -127,6 +132,76 @@
         <br>
     </footer> 
     
-<script src="Portfolio.js"></script>   
+<script>
+    let list = document.getElementById('list');
+    let navbtn = document.getElementById('bars');
+    let moon = document.getElementById('moon-icon');
+    let nav = document.getElementsByTagName('nav')[0];
+    let footer = document.getElementsByTagName('footer')[0];
+    let contactHeader = document.getElementById('contact-header');
+    let contact = document.getElementsByClassName('contact-title')[0];
+    let h3 = contact.getElementsByTagName('h3');
+    let a = contact.getElementsByTagName('a');
+    let linkedin = document.getElementById('linkedin');
+
+navbtn.addEventListener('click', () => {
+    shownav();   
+});
+
+function shownav() {
+    list.classList.toggle('sidenav');
+    
+    if (list.classList.contains('sidenav')) {
+        navbtn.innerHTML = '&times;';
+        navbtn.style.fontSize = '55px';
+        navbtn.style.top = '2%';
+    } else {
+        navbtn.innerHTML = '&#9776;';
+        navbtn.style.fontSize = '25px';
+        navbtn.style.top = '3%';
+    }
+};
+
+function darkMode() {
+    moon.classList.toggle('fa-sun');
+
+    for( i=0; i < a.length; i++) {
+        links = a[i];
+        if (moon.classList.contains('fa-sun')) {
+       links.style.color = 'white';
+        } else {
+            links.style.color = 'black';
+        }
+    }
+
+    for( i=0; i < h3.length; i++) {
+        h = h3[i];
+        if (moon.classList.contains('fa-sun')) {
+            h.style.borderBottomColor = 'white';
+        } else {
+            h.style.borderBottomColor = 'black';
+        }
+    }
+
+    if (moon.classList.contains('fa-sun')) {
+        document.body.style.backgroundColor = 'black';
+        document.body.style.color = 'white';
+        nav.style.backgroundColor = ' #05125a';
+        footer.style.backgroundColor = '#05125a';
+        list.style.backgroundColor = '#05125a';
+        contactHeader.style.borderBottomColor = 'white';
+        contactHeader.style.borderBottomColor = 'white';
+        linkedin.style.color = 'white';
+    } else {
+        document.body.style.backgroundColor = 'white';
+        document.body.style.color = 'black';
+        nav.style.backgroundColor = 'black';
+        footer.style.backgroundColor = 'black';
+        list.style.backgroundColor = 'black';
+        linkedin.style.color = 'rgb(0, 47, 255)';
+    }
+}
+
+</script>   
 </body>
 </html>
