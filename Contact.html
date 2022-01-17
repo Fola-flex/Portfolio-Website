@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="Portfolio.css">
     <title>FOLAFLEX</title>
     <style>
-        body {
+    body {
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr ;
@@ -23,7 +23,7 @@
     font-weight: 200;
 } 
 
-@media (max-width: 801px) {
+    @media (max-width: 801px) {
     body {
         grid-template-columns: 1fr ;
         grid-template-rows: repeat(4, auto);
@@ -36,7 +36,7 @@
     }
 }
 
-@media (max-width: 690px) {
+    @media (max-width: 690px) {
     body {
         grid-template-columns: 1fr ;
         grid-template-rows: repeat(4, auto);
@@ -48,7 +48,7 @@
                              'footer ';
     }
 }
-    </style>
+</style>
 </head>
 <body>
     <header>
@@ -78,10 +78,10 @@
             <p><a href="mailto:folarinolaore93@gmail.com">folarinolaore93@gmail.com</a></p>
             <br>
             <h3 style="border-bottom: 1px solid black;">SOCIAL MEDIA</h3>
-            <p><a href="" target="_blank">LinkedIn<i class="fab fa-linkedin" style="color: rgb(0, 47, 255);" id="linkedin"></i></a></p>
-            <p><a href="" target="_blank">Instagram<i class="fab fa-instagram"></i></a></p>
-            <p><a href="https://mobile.twitter.com/Man_like_Fola">Twitter<i class="fab fa-twitter" style="color: rgb(0, 153, 255);"></i></a></p>
-            <a href=""><p>Github<i class="fab fa-github"></i></p></a> 
+            <p><a href="https://www.linkedin.com/in/muiz-olaore-5776a222a" target="_blank">LinkedIn<i class="fab fa-linkedin" style="color: rgb(0, 47, 255);" id="linkedin"></i></a></p>
+            <p><a href="https://www.instagram.com/folarin_olaore" target="_blank">Instagram<i class="fab fa-instagram"></i></a></p>
+            <p><a href="https://mobile.twitter.com/Man_like_Fola" target="_blank">Twitter<i class="fab fa-twitter" style="color: rgb(0, 153, 255);"></i></a></p> 
+            <p><a href="https://github.com/Fola-flex" target="_blank">Github<i class="fab fa-github"></i></a></p>
         </div>
     </section>
 
@@ -111,18 +111,17 @@
         <div>
             <div id="mail">
                 <h2>Contact Me</h2>
-                <br>
-                <h3>Email: <span style="font-size: 16px;"><a href="mailto:folarinolaore93@gmail.com">folarinolaore93@gmail.com</a></span></h3>
-                <h3>Phone Number: <span style="font-size: 16px;">+234 905 9139 820</span></h3>
+                <i class="fa fa-envelope"></i><span><a href="mailto:folarinolaore93@gmail.com">folarinolaore93@gmail.com</a></span><br><br>
+                <i class="fa fa-mobile-alt"></i><span>+234 905 9139 820</span>
             </div>
             
             <div class="social-media">
                 <p>You can also reach out on the following platforms</p>
                 <div>
                     <a href="https://mobile.twitter.com/Man_like_Fola" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <i class="fab fa-linkedin"></i>
-                    <i class="fab fa-instagram"></i>
-                    <a href="" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/muiz-olaore-5776a222a" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/folarin_olaore"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/Fola-flex" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
             </div>
         </div>
@@ -131,40 +130,19 @@
         </div>
         <br>
     </footer> 
-    
+
+<script src="Portfolio.js"></script>
 <script>
-    let list = document.getElementById('list');
-    let navbtn = document.getElementById('bars');
-    let moon = document.getElementById('moon-icon');
-    let nav = document.getElementsByTagName('nav')[0];
-    let footer = document.getElementsByTagName('footer')[0];
     let contactHeader = document.getElementById('contact-header');
     let contact = document.getElementsByClassName('contact-title')[0];
     let h3 = contact.getElementsByTagName('h3');
     let a = contact.getElementsByTagName('a');
+    let sendMsg = document.getElementById('sendmsg');
     let linkedin = document.getElementById('linkedin');
+    let input = document.getElementsByTagName('input');
+    let text = document.getElementsByTagName('textarea')[0];
 
-navbtn.addEventListener('click', () => {
-    shownav();   
-});
-
-function shownav() {
-    list.classList.toggle('sidenav');
-    
-    if (list.classList.contains('sidenav')) {
-        navbtn.innerHTML = '&times;';
-        navbtn.style.fontSize = '55px';
-        navbtn.style.top = '2%';
-    } else {
-        navbtn.innerHTML = '&#9776;';
-        navbtn.style.fontSize = '25px';
-        navbtn.style.top = '3%';
-    }
-};
-
-function darkMode() {
-    moon.classList.toggle('fa-sun');
-
+    moon.addEventListener('click', () => { 
     for( i=0; i < a.length; i++) {
         links = a[i];
         if (moon.classList.contains('fa-sun')) {
@@ -183,24 +161,37 @@ function darkMode() {
         }
     }
 
+    for (i=0; i < input.length; i++) {
+        inputArea = input[i];
+        
+        if (moon.classList.contains('fa-sun')) {
+            inputArea.style.backgroundColor = 'black';
+            inputArea.style.border = '1px solid white';
+            inputArea.style.color = 'white'
+        } else {
+            inputArea.style.backgroundColor = 'white';
+            inputArea.style.border = '1px solid black';
+        }
+    }
+
     if (moon.classList.contains('fa-sun')) {
-        document.body.style.backgroundColor = 'black';
-        document.body.style.color = 'white';
-        nav.style.backgroundColor = ' #05125a';
-        footer.style.backgroundColor = '#05125a';
-        list.style.backgroundColor = '#05125a';
-        contactHeader.style.borderBottomColor = 'white';
         contactHeader.style.borderBottomColor = 'white';
         linkedin.style.color = 'white';
+        text.style.backgroundColor = 'black';
+        text.style.border = '1px solid white';
+        text.style.color = 'white';
+        sendMsg.style.color = 'white';
+        sendMsg.style.border = '1px solid white'
     } else {
-        document.body.style.backgroundColor = 'white';
-        document.body.style.color = 'black';
-        nav.style.backgroundColor = 'black';
-        footer.style.backgroundColor = 'black';
-        list.style.backgroundColor = 'black';
+        contactHeader.style.borderBottomColor = 'black';
         linkedin.style.color = 'rgb(0, 47, 255)';
+        text.style.backgroundColor = 'white';
+        text.style.border = '1px solid black';
+        sendMsg.style.backgroundColor = 'black';
+        sendMsg.style.border = 'none';
     }
-}
+});
+
 
 </script>   
 </body>
