@@ -24,13 +24,19 @@ function shownav() {
 
 function darkMode() {
     moon.classList.toggle('fa-sun');
+  
+
     if (moon.classList.contains('fa-sun')) {
+        moon.style.transition = 'all 1s ease-in';
+        moon.style.transform = 'rotate(360deg)';
         document.body.style.backgroundColor = 'black';
         document.body.style.color = 'white';
         nav.style.backgroundColor = ' #05125a';
         footer.style.backgroundColor = '#05125a';
         list.style.backgroundColor = '#05125a';
     } else {
+        moon.style.transition = 'all 1s ease-in';
+        moon.style.transform = 'rotate(0deg)';
         document.body.style.backgroundColor = 'white';
         document.body.style.color = 'black';
         nav.style.backgroundColor = 'black';
@@ -39,3 +45,4 @@ function darkMode() {
     }
 }
 
+    

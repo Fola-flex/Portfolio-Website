@@ -408,14 +408,14 @@ nav li:hover {
 #sendmsg {
     margin-top: 10px;
     padding: 20px;
-    width: 30%;
+    width: 50%;
     background: black;
     color: white;
     border: none;
     outline: none;
     border-radius: 30px;
     font-size: 17px;
-    margin-left: 30%;
+    margin-left: 25%;
     font-family: 'Nunito', sans-serif;
 }
 
