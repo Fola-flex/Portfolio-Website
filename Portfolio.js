@@ -27,15 +27,16 @@ function darkMode() {
   
 
     if (moon.classList.contains('fa-sun')) {
-        moon.style.transition = 'all 1s ease-in';
+        moon.style.transition = 'all 0.7s ease-in';
         moon.style.transform = 'rotate(360deg)';
         document.body.style.backgroundColor = 'black';
+        document.body.style.transition = 'all 0.7s ease-in';
         document.body.style.color = 'white';
         nav.style.backgroundColor = ' #05125a';
         footer.style.backgroundColor = '#05125a';
         list.style.backgroundColor = '#05125a';
     } else {
-        moon.style.transition = 'all 1s ease-in';
+        moon.style.transition = 'all 0.7s ease-in';
         moon.style.transform = 'rotate(0deg)';
         document.body.style.backgroundColor = 'white';
         document.body.style.color = 'black';
@@ -45,4 +46,21 @@ function darkMode() {
     }
 }
 
-    
+const fades = document.querySelectorAll('.reveal');
+
+const appearOption = {
+    threshold: 0,
+    rootMargin: "0px 0px -250px 0px"
+};
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) 
+{entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+        entry.target.classList.remove('active');
+    } else {
+        entry.target.classList.add('active');
+    }
+})}, appearOption)
+
+fades.forEach(fader => {
+    appearOnScroll.observe(fader);
+});
