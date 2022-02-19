@@ -69,7 +69,7 @@
     </header>
 
     <section class="content">
-        <div class="contact-title" style="font-size: 25px;">
+        <div class="contact-title reveal" style="font-size: 25px;" >
             <h2 style="line-height: normal;"><b>OLAORE MUIZ AFOLARIN</b></h2>
             <span>Amazing Web Developer</span>
             <br><br><br>
@@ -85,24 +85,28 @@
         </div>
     </section>
 
-    <form class="contact-form" action="contact-form.php" method="post">
+    <form class="contact-form reveal" action="contact-form.php" method="post">
         <fieldset>
             <legend>
                 <h3 id="contact-header" style="border-bottom: 1px solid black;" >CONTACT ME</h3>
             </legend>
             <div class="formstyle">
-                <label for="fullname"> Name:</label>
-                <input type="text" name="fullname" placeholder="Full name" required>
+                <label for="fullname"><i class="fa fa-user"></i></label>
+                <input type="text" name="fullname" placeholder="Your name" required>
             </div>
             <div class="formstyle">
-                <label for="email">Email:</label>
+                <label for="email"><i class="fa fa-envelope"></i></label>
                 <input type="email" name="email" placeholder="Your Email" required>
             </div>
             <div class="formstyle">
-                <label>Message:</label>
-                <textarea placeholder="Message" required></textarea>
+                <label for="subject"><i class="fa fa-sticky-note"></i></label>
+                <input type="text" name="subject" placeholder="Subject" required>
             </div>
-            <button type="submit" id="sendmsg">Submit</button>
+            <div class="formstyle">
+                <label><i class="fas fa-pen-fancy"></i></label>
+                <textarea placeholder="Message" name="message" required></textarea>
+            </div>
+            <button type="submit" name="submit" id="sendmsg">Submit</button>
         </fieldset>
     </form>
 
@@ -166,11 +170,11 @@
         
         if (moon.classList.contains('fa-sun')) {
             inputArea.style.backgroundColor = 'black';
-            inputArea.style.border = '1px solid white';
+            inputArea.style.borderBottom = '1px solid white';
             inputArea.style.color = 'white'
         } else {
             inputArea.style.backgroundColor = 'white';
-            inputArea.style.border = '1px solid black';
+            inputArea.style.borderBottom = '1px solid black';
         }
     }
 
@@ -186,6 +190,7 @@
         contactHeader.style.borderBottomColor = 'black';
         linkedin.style.color = 'rgb(0, 47, 255)';
         text.style.backgroundColor = 'white';
+        text.style.color = 'black';
         text.style.border = '1px solid black';
         sendMsg.style.backgroundColor = 'black';
         sendMsg.style.border = 'none';

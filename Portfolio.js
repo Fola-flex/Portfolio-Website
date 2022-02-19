@@ -52,7 +52,7 @@ const appearOption = {
     threshold: 0,
     rootMargin: "0px 0px -250px 0px"
 };
-const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) 
+const appearOnScroll = new IntersectionObserver(function(entries) 
 {entries.forEach(entry => {
     if (!entry.isIntersecting) {
         entry.target.classList.remove('active');
