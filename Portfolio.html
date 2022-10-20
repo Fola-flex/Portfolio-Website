@@ -3,8 +3,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,
     minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css\all.css">
-    <link rel="stylesheet" href="Portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css\Portfolio.css">
     <title>FOLAFLEX</title>
 </head>
 <body>
@@ -152,6 +153,23 @@
             </div>
 
             <div id="cards" class="reveal">
+                <img class="images" src="imgs/Upwork Personal_Loan.png" alt="website home page">
+                <div id="card-text">
+                    <div>
+                        <h1>Just-Dream</h1>
+                        <i class="fa fa-external-link-alt" id="Just-Dream"></i>
+                    </div>  
+                    <p>This is a website redesign done for a client. </p>
+                </div>
+
+                <div class="card-icon">
+                    <img src="svg/html5.svg" srcset="svg/html5.svg" alt="HTML5 icon" title="HTML5 icon">
+                    <img src="svg/css3-alt.svg" srcset="svg/css3-alt.svg" alt="Css3 icon" title="Css3 icon">
+                    <img src="svg/js.svg" srcset="svg/js.svg" alt="JS icon" title="Javascript icon">
+                </div>
+            </div>
+
+            <div id="cards" class="reveal">
                 <video class="images" autoplay muted loop>
                     <source src="imgs/form1.mp4" type="video/mp4">
                 </video>
@@ -228,6 +246,7 @@
     let sticky = document.getElementById('Sticky');
     let validation = document.getElementById('Validation');
     let almanac = document.getElementById('Almanac');
+    let dream = document.getElementById('Just-Dream');
 
     moon.addEventListener('click', () => {
     for( i=0; i < button.length; i++) {
@@ -260,6 +279,10 @@
 
     sticky.addEventListener('click',  () => {
         window.open("https://fola-flex.github.io/Sticky-Notes/Sticky.html");
+    } )
+
+    dream.addEventListener('click',  () => {
+        window.open("https://fola-flex.github.io/Just-Dream-Global/index.html");
     } )
 </script>
 </body>
