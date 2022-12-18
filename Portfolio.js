@@ -39,6 +39,7 @@ function darkMode() {
     } else {
         moon.style.transition = 'all 0.7s ease-in';
         moon.style.transform = 'rotate(0deg)';
+        moon.classList.add('fa-moon');
         document.body.style.backgroundColor = 'white';
         document.body.style.color = 'black';
         nav.style.backgroundColor = 'black';
