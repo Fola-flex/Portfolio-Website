@@ -29,6 +29,7 @@ function darkMode() {
     if (moon.classList.contains('fa-sun')) {
         moon.style.transition = 'all 0.7s ease-in';
         moon.style.transform = 'rotate(360deg)';
+        moon.classList.remove('fa-moon');
         document.body.style.backgroundColor = 'black';
         document.body.style.transition = 'all 0.7s ease-in';
         document.body.style.color = 'white';
