@@ -12,7 +12,7 @@
         <nav>
             <h1 translate="no" style="z-index: 3;">FOLA<span style="color: rgb(0, 255, 221);">FL</span><span 
                 style="color: rgb(0, 255, 179);">EX</span></h1>
-                <i class="fa fa-moon" onclick="darkMode();" id="moon-icon"></i>
+                <i class="fa fa-moon" id="moon-icon"></i>
             <div>
                 <span id="bars">&#9776;</span>
                 <ul id="list"> 
@@ -248,25 +248,38 @@
     let dream = document.getElementById('Just-Dream');
 
     moon.addEventListener('click', () => {
-    for( i=0; i < button.length; i++) {
-        buttons = button[i];
-        if (moon.classList.contains('fa-sun')) {
+        darkMode = localStorage.getItem("dark-mode"); // update darkMode when clicked
+        if (darkMode === "disabled") {
+            light();
+        } else {
+            dark();
+        } 
+    })
+
+    const dark = () => {
+        for( i=0; i < button.length; i++) {
+            buttons = button[i];
             buttons.style.color = 'black';
             buttons.style.backgroundColor = 'white';
-        } else {
+        }
+            github.style.background = 'radial-gradient( white 66%, black 34%)';
+            more.style.color = 'white';
+    
+    }
+        
+    const light = () => {
+        for( i=0; i < button.length; i++) {
+            buttons = button[i];
             buttons.style.color = 'white';
             buttons.style.backgroundColor = 'black';
         }
+            github.style.background = 'white';
+            more.style.color = 'black'; 
     }
 
-    if (moon.classList.contains('fa-sun')) {
-        github.style.background = 'radial-gradient( white 66%, black 34%)';
-        more.style.color = 'white';
-    } else {
-        github.style.background = 'white';
-        more.style.color = 'black';
+    if (darkMode === "enabled") {
+        dark(); // set state of darkMode on page load
     }
-    });
 
     almanac.addEventListener('click', () => {
         window.open("https://fola-flex.github.io/Project-Almanac/Project%20almanac.html");

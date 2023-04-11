@@ -55,7 +55,7 @@
         <nav>
             <h1 translate="no" style="z-index: 3;">FOLA<span style="color: rgb(0, 255, 221);">FL</span><span 
                 style="color: rgb(0, 255, 179);">EX</span></h1>
-                <i class="fa fa-moon" onclick="darkMode();" id="moon-icon"></i>
+                <i class="fa fa-moon" id="moon-icon"></i>
             <div>
                 <span id="bars">&#9776;</span>
                 <ul id="list">
@@ -145,39 +145,33 @@
     let input = document.getElementsByTagName('input');
     let text = document.getElementsByTagName('textarea')[0];
 
-    moon.addEventListener('click', () => { 
-    for( i=0; i < a.length; i++) {
-        links = a[i];
-        if (moon.classList.contains('fa-sun')) {
-       links.style.color = 'white';
+    moon.addEventListener('click', () => {
+        darkMode = localStorage.getItem("dark-mode"); // update darkMode when clicked
+        if (darkMode === "disabled") {
+            disableDark();
         } else {
-            links.style.color = 'black';
-        }
-    }
-
-    for( i=0; i < h3.length; i++) {
-        h = h3[i];
-        if (moon.classList.contains('fa-sun')) {
+            enableDark();
+        } 
+    });
+     
+    const enableDark = () => {
+        for( i=0; i < h3.length; i++) {
+            h = h3[i];
             h.style.borderBottomColor = 'white';
-        } else {
-            h.style.borderBottomColor = 'black';
         }
-    }
 
-    for (i=0; i < input.length; i++) {
-        inputArea = input[i];
-        
-        if (moon.classList.contains('fa-sun')) {
+        for (i=0; i < input.length; i++) {
+            inputArea = input[i]; 
             inputArea.style.backgroundColor = 'black';
             inputArea.style.borderBottom = '1px solid white';
             inputArea.style.color = 'white'
-        } else {
-            inputArea.style.backgroundColor = 'white';
-            inputArea.style.borderBottom = '1px solid black';
         }
-    }
 
-    if (moon.classList.contains('fa-sun')) {
+        for( i=0; i < a.length; i++) {
+            links = a[i];
+            links.style.color = 'white';
+        }
+        
         contactHeader.style.borderBottomColor = 'white';
         linkedin.style.color = 'white';
         text.style.backgroundColor = 'black';
@@ -185,7 +179,26 @@
         text.style.color = 'white';
         sendMsg.style.color = 'white';
         sendMsg.style.border = '1px solid white'
-    } else {
+    }
+
+    const disableDark = () => {
+        for( i=0; i < h3.length; i++) {
+            h = h3[i];
+            h.style.borderBottomColor = 'black';
+        }
+        
+        for (i=0; i < input.length; i++) {
+            inputArea = input[i]; 
+            inputArea.style.backgroundColor = 'white';
+            inputArea.style.borderBottom = '1px solid black';
+            inputArea.style.color = 'black'
+        }
+
+        for( i=0; i < a.length; i++) {
+            links = a[i];
+            links.style.color = 'black';
+        }
+
         contactHeader.style.borderBottomColor = 'black';
         linkedin.style.color = 'rgb(0, 47, 255)';
         text.style.backgroundColor = 'white';
@@ -194,8 +207,11 @@
         sendMsg.style.backgroundColor = 'black';
         sendMsg.style.border = 'none';
     }
-});
 
+
+    if (darkMode === "enabled") {
+        enableDark(); // set state of darkMode on page load
+    }
 
 </script>   
 </body>
