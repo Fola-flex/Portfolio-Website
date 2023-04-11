@@ -164,7 +164,8 @@
             inputArea = input[i]; 
             inputArea.style.backgroundColor = 'black';
             inputArea.style.borderBottom = '1px solid white';
-            inputArea.style.color = 'white'
+            inputArea.style.color = 'white';
+            inputArea.style.transition = 'all 0.7s ease-in';
         }
 
         for( i=0; i < a.length; i++) {
@@ -177,8 +178,9 @@
         text.style.backgroundColor = 'black';
         text.style.border = '1px solid white';
         text.style.color = 'white';
+        text.style.transition = 'all 0.7s ease-in'
         sendMsg.style.color = 'white';
-        sendMsg.style.border = '1px solid white'
+        sendMsg.style.border = '1px solid white';
     }
 
     const disableDark = () => {
