@@ -3,7 +3,11 @@ let navbtn = document.getElementById('bars');
 let moon = document.getElementById('moon-icon');
 let nav = document.getElementsByTagName('nav')[0];
 let footer = document.getElementsByTagName('footer')[0];
+let year = document.getElementsByClassName('year')[0];
+let display_year = new Date();
 let darkMode = localStorage.getItem("dark-mode");
+
+year.innerHTML = display_year.getFullYear();
 
 navbtn.addEventListener('click', () => {
     shownav();   
