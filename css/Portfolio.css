@@ -232,6 +232,7 @@ nav li:hover {
     width: 100%;
     line-height: 25px;
     gap: 20px;
+    padding: 10px;
 }
 
 .project-title {
