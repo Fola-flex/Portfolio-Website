@@ -85,7 +85,7 @@
         </div>
     </section>
 
-    <form class="contact-form reveal" action="https://formspree.io/f/mdorkbez" method="post">
+    <form class="contact-form reveal" action="https://formspree.io/f/mdorkbez" id="my-form" method="post">
         <fieldset>
             <legend>
                 <h3 id="contact-header" style="border-bottom: 1px solid black;" >CONTACT ME</h3>
@@ -107,6 +107,7 @@
                 <textarea placeholder="Message" name="message" required></textarea>
             </div>
             <button type="submit" id="sendmsg">Submit</button>
+            <p id="my-form-status"></p>
         </fieldset>
     </form>
     
@@ -135,6 +136,7 @@
     </footer> 
 
 <script src="Portfolio.js"></script>
+<script src="contact.js"></script>
 <script>
     let contactHeader = document.getElementById('contact-header');
     let contact = document.getElementsByClassName('contact-title')[0];
