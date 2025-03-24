@@ -4,6 +4,7 @@ let moon = document.getElementById('moon-icon');
 let nav = document.getElementsByTagName('nav')[0];
 let footer = document.getElementsByTagName('footer')[0];
 let year = document.getElementsByClassName('year')[0];
+let express = document.querySelectorAll(".express_js");
 let display_year = new Date();
 let darkMode = localStorage.getItem("dark-mode");
 
@@ -47,6 +48,11 @@ const enableDarkMode = () => {
     nav.style.backgroundColor = ' #05125a';
     footer.style.backgroundColor = '#05125a';
     list.style.backgroundColor = '#05125a';
+    express.forEach((element) => {
+        element.src = "svg/express_dark.svg";
+        element.srcset = "svg/express_dark.svg"
+        console.log(element);
+    })
 } 
     
 const disableDarkMode = () => {
@@ -60,6 +66,10 @@ const disableDarkMode = () => {
     nav.style.backgroundColor = 'black';
     footer.style.backgroundColor = 'black';
     list.style.backgroundColor = 'black';
+    express.forEach((element) => {
+        element.src = "svg/express.svg";
+        element.srcset = "svg/express.svg"
+    })
 }
 
 if (darkMode === "enabled") {

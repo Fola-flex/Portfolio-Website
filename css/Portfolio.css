@@ -312,6 +312,11 @@ nav li:hover {
     justify-content: space-between;
     width: 200px;
 }
+
+.card-icon.multiple {
+    width: 100%;
+}
+
 .footer-content {
     width: 100%;
     grid-area: footer;
