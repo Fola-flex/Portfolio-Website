@@ -51,7 +51,6 @@ const enableDarkMode = () => {
     express.forEach((element) => {
         element.src = "svg/express_dark.svg";
         element.srcset = "svg/express_dark.svg"
-        console.log(element);
     })
 } 
     
